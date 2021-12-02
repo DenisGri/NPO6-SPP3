@@ -1,0 +1,23 @@
+﻿<Window x:Class="AssemblyBrowserApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssemblyBrowserApp"
+        mc:Ignorable="d"
+        Title="Assembly Browser" Height="727.8" Width="1296.35" ResizeMode="NoResize">
+    <Grid>
+        <Menu DockPanel.Dock="Top" FontSize="20">
+            <MenuItem Header="File">
+                <MenuItem Header="Open" Command="{Binding OpenFileCommand}"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TreeView ItemsSource="{Binding Path=Namespaces}" Margin="0,40,0,-2.6" HorizontalAlignment="Left" Width="1275">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Members}">
+                    <TextBlock Text="{Binding Signature, UpdateSourceTrigger=PropertyChanged}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+    </Grid>
+</Window>

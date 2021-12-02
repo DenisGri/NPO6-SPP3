@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>SPP2_Faker</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CustomGenerator\CustomGenerator.csproj" />
+      <ProjectReference Include="..\Generator.SDK\Generator.SDK.csproj" />
+    </ItemGroup>
+
+</Project>

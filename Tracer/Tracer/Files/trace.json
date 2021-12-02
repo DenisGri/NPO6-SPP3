@@ -1,0 +1,92 @@
+{
+  "threads": [
+    {
+      "id": 1,
+      "time": 1220,
+      "methods": [
+        {
+          "name": "MyMethod",
+          "class": "Foo",
+          "time": 208.0,
+          "methods": [
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 104.0,
+              "methods": null
+            },
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 101.0,
+              "methods": null
+            }
+          ]
+        },
+        {
+          "name": "MyMethod",
+          "class": "Foo",
+          "time": 203.0,
+          "methods": [
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 102.0,
+              "methods": null
+            },
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 100.0,
+              "methods": null
+            }
+          ]
+        },
+        {
+          "name": "MyMethod",
+          "class": "Foo",
+          "time": 202.0,
+          "methods": [
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 100.0,
+              "methods": null
+            },
+            {
+              "name": "InnerMethod",
+              "class": "Bar",
+              "time": 101.0,
+              "methods": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "time": 51,
+      "methods": [
+        {
+          "name": "Method",
+          "class": "MainApp",
+          "time": 51.0,
+          "methods": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "time": 50,
+      "methods": [
+        {
+          "name": "Method",
+          "class": "MainApp",
+          "time": 50.0,
+          "methods": null
+        }
+      ]
+    }
+  ]
+}
+}

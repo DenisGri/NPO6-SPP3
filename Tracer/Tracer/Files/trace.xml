@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-16"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <thread id="1" time="1220">
+    <methods name="MyMethod" class="Foo" time="208">
+      <methods name="InnerMethod" class="Bar" time="104" />
+      <methods name="InnerMethod" class="Bar" time="101" />
+    </methods>
+    <methods name="MyMethod" class="Foo" time="203">
+      <methods name="InnerMethod" class="Bar" time="102" />
+      <methods name="InnerMethod" class="Bar" time="100" />
+    </methods>
+    <methods name="MyMethod" class="Foo" time="202">
+      <methods name="InnerMethod" class="Bar" time="100" />
+      <methods name="InnerMethod" class="Bar" time="101" />
+    </methods>
+  </thread>
+  <thread id="6" time="51">
+    <methods name="Method" class="MainApp" time="51" />
+  </thread>
+  <thread id="7" time="50">
+    <methods name="Method" class="MainApp" time="50" />
+  </thread>
+</root>
