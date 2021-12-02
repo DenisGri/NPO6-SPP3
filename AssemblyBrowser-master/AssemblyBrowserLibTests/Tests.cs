@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Intrinsics.X86;
 using AssemblyBrowserLib;
 using AssemblyBrowserLib.Data;
 using Moq;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace AssemblyBrowserLibTests
 {
@@ -26,7 +23,6 @@ namespace AssemblyBrowserLibTests
             _namespaces = _assemblyBrowser.GetAssemblyInfo(_lib.Location);
         }
 
-        
         [Test]
         public void MembersCountTest()
         {
@@ -76,7 +72,7 @@ namespace AssemblyBrowserLibTests
                 if (type.Signature == "ExtClass")
                 {
                     bool flag = false;
-                    foreach (var member in ((DataContainer)type).Members)
+                    foreach (var member in ((DataContainer) type).Members)
                     {
                         if (member.Signature == "CharCount")
                         {
@@ -95,11 +91,12 @@ namespace AssemblyBrowserLibTests
             var types = _namespaces[0].Members;
             foreach (var type in types)
             {
-                if (type.Signature != "public static class  ExtClass" && type.Signature != "public  class  TestClass1" && type.Signature != "private   class  TestClass2" && type.Signature != "public abstract class  TestClass3")
+                if (type.Signature != "public static class  ExtClass" &&
+                    type.Signature != "public  class  TestClass1" && type.Signature != "private   class  TestClass2" &&
+                    type.Signature != "public abstract class  TestClass3")
                 {
                     Assert.Fail($"Error in type name {type.Signature}");
                 }
-
             }
         }
 
@@ -109,7 +106,7 @@ namespace AssemblyBrowserLibTests
             var type = _namespaces[0].Members[1];
             if (type.Signature == "TestClass1")
             {
-                Assert.AreEqual(((DataContainer)type).Members[0], "private int foo");
+                Assert.AreEqual(((DataContainer) type).Members[0], "private int foo");
             }
         }
     }
